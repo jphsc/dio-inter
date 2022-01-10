@@ -1,0 +1,3 @@
+[submodule "basecamp-javascript"]
+	path = basecamp-javascript
+	url = https://github.com/jphsc/dio-inter
