@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Document Object Model</title>
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="stilo.css">
+</head>
+
+<body id="text">
+    <h1>Light mode ON</h1>
+    <button class="button-black" id="button">Dark mode</button>
+
+    <script>
+        const button = document.getElementById("button");
+        const text = document.getElementById('text');
+        const body = document.getElementsByTagName('body');
+
+        button.addEventListener('click', changeMode)
+
+        function changeMode() {
+            let type = 1;
+
+            if (type == 1) {
+                type = 2;
+                button.innerHTML = "Light mode"
+                button.classList.remove("button-white")
+                button.classList.add("button-black")
+                text.innerHTML = "Dark mode ON"
+                text.classList.remove("back-black")
+                text.classList.add("back-white")
+            } else {
+                type = 1;
+                button.innerHTML = "Light mode"
+                button.classList.remove("button-black")
+                button.classList.add("button-white")
+                text.innerHTML = "Dark mode ON"
+                text.classList.remove("back-black")
+                text.classList.add("back-white")
+            }
+        }
+    </script>
+</body>
+
+</html>
